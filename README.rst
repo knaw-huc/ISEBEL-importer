@@ -26,7 +26,7 @@ To install ckanext-isebelimporter (``pip install -r requirements.txt`` to instal
 
 2. Install the ckanext-isebelimporter Python package into your virtual environment::
 
-     pip install ckanext-isebelimporter
+     cp ckanext-isebelimporter ./
 
 3. Add ``isebelimporter`` to the ``ckan.plugins`` setting in your CKAN
    config file (by default the config file is located at

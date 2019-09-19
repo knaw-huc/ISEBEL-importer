@@ -1,0 +1,29 @@
+{% ckan_extends %}
+
+{% set user = user_dict %}
+
+{% import 'macros/form.html' as form %}
+
+{% block admin_form %}
+
+  {{ super() }}
+
+  <h3>Custom configuration options </h3>
+
+  {{ form.input('ckan.datasets_per_page', id='field-ckan.datasets_per_page', label=_('Datasets per page'), value=data['ckan.datasets_per_page'], error=errors['ckan.datasets_per_page']) }}
+
+  {{ form.input('ckanext.importing_qty', id='field-ckanext.importing_qty', label=_('Max records to import'), value=data['ckanext.importing_qty'], error=errors['ckanext.importing_qty']) }}
+
+
+{% endblock %}
+
+
+{% block admin_form_help %}
+
+  {{ super() }}
+
+  <p><strong>Datasets per page:</strong> Number of datasets displayed in dataset listings (eg search page).</p>
+
+  <p><strong>Max records to import:</strong> 0 or empty value will default to unlimited.</p>
+
+{% endblock %}
